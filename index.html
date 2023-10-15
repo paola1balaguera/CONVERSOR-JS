@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="main_title"><h2>NUESTRAS CONVERSIONES</h2></div>
+            <div class="contenedor_conversiones">
+                <div class="estilos_medidas">
+                    <button class="button" id="boton_distancia">
+                        <span>CONVERSOR DISTANCIA</span>
+                    </button>
+                </div>
+                <div class="estilos_temperatura">
+                    <button class="button btn_raro" id="boton_temperatura">
+                        <span>CONVERSOR TEMPERATURA</span>
+                    </button>
+                </div>
+                <div class="estilos_peso">
+                    <button class="button" id="boton_peso">
+                        <span>CONVERSOR PESO</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="resultado" id="resultado">
+            <div class="contenido_resultado">
+                <div class="paola">
+                    <span id="cerrar_resultado" class="close">&times;</span>
+                    <h1 id="respuesta_final">EL RESULTADO ES:</h1>
+                </div>
+            </div>
+        </div>
+
+<!--  ===========================  PRIMER MODAL  ===========================  -->
+        <div class="modal modal1" id="modal1">
+            <div class="contenido_modal">
+                <h2>Conversor Medidas</h2>
+                <span id="boton_x_modal1" class="close">&times;</span>
+                <div class="row1">
+                    <div class="content_input">
+                        <input type="number" id="distance">
+                    </div>
+                    <div class="content_btn">
+                        <button id="btn_modal_guardar1" class="pushable">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front">CONVERTIR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row2">
+                    <div class="medida_ medida_entrada">
+                        <select id="input-dates-select">
+                            <option value="m">Metros</option>
+                            <option value="km">Kilómetros</option>
+                            <option value="cm">Centimetro</option>
+                            <option value="mi">Millas</option>
+                            <option value="ft">Pies</option>
+                        </select>
+                    </div>
+                    <div class="contenedor_vector">
+                        <img src="vector.png" alt="flechas_intercambio">
+                    </div>
+                    <div class="medida_ medida_salida">
+                        <select id="output-dates-select">
+                            <option value="km">Kilómetros</option>
+                            <option value="m">Metros</option>
+                            <option value="cm">Centimetro</option>
+                            <option value="mi">Millas</option>
+                            <option value="ft">Pies</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--  ===========================  SEGUNDO MODAL  ===========================  -->
+        <div class="modal modal2" id="modal2">
+            <div class="contenido_modal">
+                <h2>Conversor Temperatura</h2>
+                <span id="boton_x_modal2" class="close">&times;</span>
+                <div class="row1">
+                    <div class="content_input">
+                        <input type="number" id="grades">
+                    </div>
+                    <div  id="btn_modal_guardar2"  class="content_btn">
+                        <button class="pushable" id="sapito">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front">CONVERTIR</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="medida_ medida_entrada">
+                        <select id="input-temperature">
+                            <option value="ºC">Celcius</option>
+                            <option value="ºF">Fahrenheit</option>
+                            <option value="K">Kelvin</option>
+                        </select>
+                    </div>
+                    <div class="contenedor_vector">
+                        <img src="vector.png" alt="flechas_intercambio">
+                    </div>
+                    <div class="medida_ medida_salida">
+                        <select id="outpot-temperature">
+                            <option value="ºF">Fahrenheit</option>
+                            <option value="ºC">Celcius</option>
+                            <option value="K">Kelvin</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--  ===========================  TERCER MODAL  ===========================  -->
+        <div class="modal modal3" id="modal3">
+            <div class="contenido_modal">
+                <h2>Conversor Peso</h2>
+                <span id="boton_x_modal3" class="close">&times;</span>
+                <div class="row1">
+                    <div class="content_input">
+                        <input type="number" id="weight">
+                    </div>
+                    <div class="content_btn">
+                        <button id="btn_modal_guardar3" class="pushable">
+                            <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front">CONVERTIR</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="medida_ medida_entrada">
+                        <select id="input-weight">
+                            <option value="g">Gramos</option>
+                            <option value="mg">Miligramos</option>
+                            <option value="kg">Kilogramos</option>
+                            <option value="t">Toneladas</option>
+                            <option value="lb">Libras</option>
+                        </select>
+                    </div>
+                    <div class="contenedor_vector">
+                        <img src="vector.png" alt="flechas_intercambio">
+                    </div>
+                    <div class="medida_ medida_salida">
+                        <select id="output-weight">
+                            <option value="kg">Kilogramos</option>
+                            <option value="mg">Miligramos</option>
+                            <option value="g">Gramos</option>
+                            <option value="t">Toneladas</option>
+                            <option value="lb">Libras</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

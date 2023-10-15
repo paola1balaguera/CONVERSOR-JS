@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+/* ==============================  ESTILOS CONTENIDO  ============================== */
+
+/* .container {
+    height: 100vh;
+    width: 100%;
+    background: url('background1.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+.container {
+    height: 100vh;
+    width: 100%;
+    background: url("background1.png");
+    transition: background 5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.main {
+    background-color: rgb(243, 255, 148);
+    height: 80vh;
+    width: 40vw;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+}
+.main_title {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_title h2{
+    text-align: center;
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: 'Roboto Slab', serif;
+}
+.contenedor_conversiones {
+    height: 80%;
+    border-top: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor_conversiones > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.estilos_medidas {
+    height: 30%;
+    width: 100%;
+}
+.estilos_temperatura {
+    height: 30%;
+    width: 100%;
+}
+.estilos_peso {
+    height: 30%;
+    width: 100%;
+}
+
+.button {
+    width: 200px;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #5CDB95;
+}
+.button span {
+    background: #f1f5f8;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+}
+.button:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+.btn_raro {
+    transform: rotate(-5deg);
+}
+
+/* ==============================  ESTILOS RESPUESTA ============================== */
+.contenedor {
+    height: 100vh;
+    width: 100%;
+    transition: background 5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.resultado{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+.contenido_resultado {
+    height: 40vh;
+    width: 35vw;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    background: rgba(82, 215, 255, 0.836);
+    backdrop-filter: blur(25px);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+}
+.cerrado {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #ff4343;
+}
+/* ==============================  ESTILOS MODAL 1 ============================== */
+
+.modal{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.modal1 {display: none;}
+.modal2 {display: none;}
+.modal3 {display: none;}
+
+.contenido_modal {
+    height: 60vh;
+    width: 50vw;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    background: rgb(255, 246, 124);
+    backdrop-filter: blur(25px);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.contenido_modal h2 {
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    color: black;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #ff4343;
+}
+/* ==============================  ESTILOS FILA 1 MODAL  ============================== */
+
+.row1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.content_input {
+    height: 100px;
+    width: 65%;
+/*     border: 5px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.content_input input {
+    height: 60%;
+    width: 85%;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    background: #F3F4F6;
+    border: 2px solid transparent;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, 
+    color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+    border-radius: .6rem;
+    margin-right: 1rem;
+}
+.content_input input:hover, .content_input input:focus {
+    outline: none;
+    border-color: #05060fca;
+}
+
+.content_btn {
+    height: 100px;
+    width: 35%;
+/*     border: 5px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.content_btn button {
+    height: 60%;
+    width: 65%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* ==============================  ESTILOS FILA 2 MODAL  ============================== */
+
+.row2 {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 1rem;
+/*     background: rgba(255, 167, 167, 0.781); */
+}
+
+.medida_ {
+    width: 34%;
+    height: 150px;
+/*     border: 3px solid black; */
+}
+.medida_ select {
+    height: 30%;
+    width: 60%;
+    border-radius: 15px;
+    text-align: center;
+    overflow: visible;
+}
+.medida_ select > option {
+    font-size: 0.9rem;
+    font-family: 'nunito', sans-serif;
+}
+
+.medida_entrada {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.medida_entrada select {margin-right: 1rem;}
+.medida_salida {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.medida_salida select {margin-left: 1rem;}
+
+.contenedor_vector {
+    height: 150px;
+    width: 28%;
+/*     border: 3px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor_vector img {
+    width: 70%;
+    height: 70%;
+}
+
+
+/* ==============================  ESTILOS BOTON RARO MODAL  ============================== */
+.pushable {
+    position: relative;
+    background: transparent;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    outline-offset: 4px;
+    outline-color: deeppink;
+    transition: filter 250ms;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(226, 25%, 69%);
+    border-radius: 8px;
+    filter: blur(2px);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(
+        to right,
+        hsl(248, 39%, 39%) 0%,
+        hsl(248, 39%, 49%) 8%,
+        hsl(248, 39%, 39%) 92%,
+        hsl(248, 39%, 29%) 100%
+    );
+} 
+.front {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background: hsl(248, 53%, 58%);
+    padding: 16px 32px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+.pushable:hover {
+    filter: brightness(110%);
+}
+.pushable:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+.pushable:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+.pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+.pushable:focus:not(:focus-visible) {
+    outline: none;
+}
